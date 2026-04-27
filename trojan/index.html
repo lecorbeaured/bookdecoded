@@ -2956,22 +2956,26 @@ function submitModal() {
   const mailtoSubject = encodeURIComponent(`[BookDecoded] ${subject} — ${name}`);
   const mailtoBody = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nSubject: ${subject}\n\n${message}`);
 
-  // Simulate send — swap with Resend API call when ready
-  setTimeout(() => {
-    document.getElementById('modal-form-wrap').style.display = 'none';
-    document.getElementById('modal-success').style.display = 'block';
-    // Reset after 8 seconds if they close and reopen
-    setTimeout(() => {
-      document.getElementById('modal-form-wrap').style.display = 'block';
-      document.getElementById('modal-success').style.display = 'none';
-      document.getElementById('m-name').value = '';
-      document.getElementById('m-email').value = '';
-      document.getElementById('m-subject').value = '';
-      document.getElementById('m-message').value = '';
+  try {
+    const res = await fetch('/.netlify/functions/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ type: 'contact', name, email, subject, message })
+    });
+    const result = await res.json();
+    if (result.success) {
+      document.getElementById('modal-form-wrap').style.display = 'none';
+      document.getElementById('modal-success').style.display = 'block';
+    } else {
       btn.disabled = false;
       btn.textContent = 'Send Message';
-    }, 8000);
-  }, 900);
+      alert('Something went wrong. Please email hello@bookdecoded.com directly.');
+    }
+  } catch (err) {
+    btn.disabled = false;
+    btn.textContent = 'Send Message';
+    alert('Something went wrong. Please email hello@bookdecoded.com directly.');
+  }
 }
 
 // Close modal on Escape key

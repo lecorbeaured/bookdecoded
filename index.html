@@ -1225,10 +1225,19 @@ document.querySelectorAll('.faq-q').forEach(q => {
 function capSubmit() {
   const email = document.getElementById('cap-email').value.trim();
   if (!email || !email.includes('@')) { document.getElementById('cap-email').focus(); return; }
-  document.querySelector('.capture-btn').style.display = 'none';
-  document.getElementById('cap-email').style.display = 'none';
-  document.querySelector('.capture-note').style.display = 'none';
-  document.getElementById('cap-success').style.display = 'block';
+  const capBtn = document.querySelector('.capture-btn');
+  capBtn.disabled = true;
+  capBtn.textContent = 'Saving…';
+  fetch('/.netlify/functions/contact', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ type: 'notify', email })
+  }).finally(() => {
+    document.querySelector('.capture-btn').style.display = 'none';
+    document.getElementById('cap-email').style.display = 'none';
+    document.querySelector('.capture-note').style.display = 'none';
+    document.getElementById('cap-success').style.display = 'block';
+  });
 }
 document.addEventListener('DOMContentLoaded', () => {
   const e = document.getElementById('cap-email');

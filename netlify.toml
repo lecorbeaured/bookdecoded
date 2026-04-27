@@ -2,6 +2,10 @@
   publish = "."
   command = ""
 
+# ── FUNCTIONS ──
+[functions]
+  directory = "functions"
+
 # ── SUBDOMAIN REDIRECTS ──
 # trojan.bookdecoded.com → serve /trojan/index.html
 
@@ -26,14 +30,9 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none';"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.resend.com; frame-ancestors 'none';"
 
 [[headers]]
   for = "/*.html"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
-
-# ── FUTURE FUNCTIONS ──
-# Uncomment when Resend functions are wired up
-# [functions]
-#   directory = "functions"

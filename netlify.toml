@@ -1,0 +1,39 @@
+[build]
+  publish = "."
+  command = ""
+
+# ── SUBDOMAIN REDIRECTS ──
+# trojan.bookdecoded.com → serve /trojan/index.html
+
+[[redirects]]
+  from = "https://trojan.bookdecoded.com/*"
+  to = "/trojan/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# ── SECURITY & PERFORMANCE HEADERS ──
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none';"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# ── FUTURE FUNCTIONS ──
+# Uncomment when Resend functions are wired up
+# [functions]
+#   directory = "functions"

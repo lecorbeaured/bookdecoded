@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BookDecoded — 30-Day Study Guides for Books That Change How You Think</title>
+<meta name="description" content="BookDecoded publishes structured 30-day study guides for the most influential books on power, influence, psychology, and self-command. One theme. One example. One exercise. Per day.">
+<meta name="keywords" content="book study guide, 30 day reading guide, power books decoded, influence books summary, book breakdown daily, self development book guides, bookdecoded">
+<meta name="author" content="Eric Coste — EBSS Web Studio">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://bookdecoded.com/">
+
+<!-- GEO -->
+<meta name="geo.region" content="US-NV">
+<meta name="geo.placename" content="Las Vegas, Nevada">
+<meta name="geo.position" content="36.1699;-115.1398">
+<meta name="ICBM" content="36.1699, -115.1398">
+
+<!-- OG -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="BookDecoded — 30-Day Study Guides for Books That Change How You Think">
+<meta property="og:description" content="Structured 30-day guides for the most influential books on power, influence, psychology, and self-command. One theme. One example. One exercise. Per day.">
+<meta property="og:url" content="https://bookdecoded.com/">
+<meta property="og:site_name" content="BookDecoded">
+<meta property="og:image" content="https://bookdecoded.com/og-image.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BookDecoded — 30-Day Study Guides">
+<meta name="twitter:description" content="Decode the most influential books on power, influence, and self-command. One day at a time.">
+<meta name="twitter:image" content="https://bookdecoded.com/og-image.jpg">
+
+<!-- Schema: WebSite -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"BookDecoded","url":"https://bookdecoded.com","description":"Structured 30-day study guides for influential books on power, influence, psychology, and self-command","publisher":{"@type":"Organization","name":"EBSS Web Studio","url":"https://ebssweb.com"},"potentialAction":{"@type":"SearchAction","target":"https://bookdecoded.com/?s={search_term_string}","query-input":"required name=search_term_string"}}
+</script>
+
+<!-- Schema: ItemList of guides -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ItemList","name":"BookDecoded 30-Day Study Guides","description":"A network of structured 30-day study guides for influential books","itemListElement":[{"@type":"ListItem","position":1,"name":"TROJAN: The Invisible Game of Influence — 30-Day Study Guide","url":"https://trojan.bookdecoded.com"},{"@type":"ListItem","position":2,"name":"The 48 Laws of Power — 30-Day Study Guide","url":"https://48laws.bookdecoded.com"},{"@type":"ListItem","position":3,"name":"Influence by Robert Cialdini — 30-Day Study Guide","url":"https://influence.bookdecoded.com"},{"@type":"ListItem","position":4,"name":"Atomic Habits — 30-Day Study Guide","url":"https://atomichabits.bookdecoded.com"}],"numberOfItems":4,"itemListOrder":"https://schema.org/ItemListOrderAscending"}
+</script>
+
+<!-- Schema: FAQ -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is BookDecoded?","acceptedAnswer":{"@type":"Answer","text":"BookDecoded publishes structured 30-day study guides for the most influential books on power, influence, psychology, and self-command. Each guide breaks a book into one theme per day with a real-world example and a single actionable exercise."}},{"@type":"Question","name":"How are the BookDecoded guides structured?","acceptedAnswer":{"@type":"Answer","text":"Each guide covers one book over 30 days. Every day focuses on a single core idea from the book, illustrates it with a concrete real-world example, and gives you one exercise to apply it immediately. Progress saves automatically in your browser."}},{"@type":"Question","name":"Are the BookDecoded guides free?","acceptedAnswer":{"@type":"Answer","text":"The online guides are free to read. Companion workbooks — print-ready PDF versions with journal space for each exercise — are available for $8 each on Payhip."}}]}
+</script>
+
+<!-- Schema: BreadcrumbList -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"BookDecoded","item":"https://bookdecoded.com/"}]}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Instrument+Mono:ital@0;1&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+<style>
+/* ── RESET ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; text-align: left; }
+html { scroll-behavior: smooth; text-align: left; }
+body { text-align: left; }
+
+/* ── TOKENS ── */
+:root {
+  --void:   #080806;
+  --paper:  #f0ebe2;
+  --dust:   #9a9488;
+  --rule:   rgba(255,255,255,0.07);
+  --rule2:  rgba(255,255,255,0.12);
+  --gold:   #b8962a;
+  --goldf:  #d4aa38;
+  --ff-d:   'Cormorant Garamond', Georgia, serif;
+  --ff-b:   'EB Garamond', Georgia, serif;
+  --ff-m:   'Instrument Mono', monospace;
+  --ease:   cubic-bezier(0.16,1,0.3,1);
+}
+
+body {
+  font-family: var(--ff-b);
+  background: var(--void);
+  color: var(--paper);
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── GRAIN OVERLAY ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.028;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ── PROGRESS BAR ── */
+#prog {
+  position: fixed;
+  top: 0; left: 0;
+  height: 1px;
+  background: var(--gold);
+  z-index: 1000;
+  width: 0%;
+  transition: width 0.08s linear;
+}
+
+/* ── MASTHEAD ── */
+.masthead {
+  border-bottom: 1px solid var(--rule2);
+  padding: 0 48px;
+  display: flex;
+  align-items: stretch;
+  min-height: 52px;
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  background: rgba(8,8,6,0.96);
+  backdrop-filter: blur(12px);
+}
+
+.masthead-brand {
+  font-family: var(--ff-d);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--paper);
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.02em;
+  padding-right: 32px;
+  border-right: 1px solid var(--rule);
+  margin-right: 24px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+.masthead-brand em { font-style: italic; color: var(--gold); }
+
+.masthead-tagline {
+  font-family: var(--ff-m);
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--dust);
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.masthead-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-left: auto;
+  padding-left: 24px;
+  border-left: 1px solid var(--rule);
+}
+
+.masthead-count {
+  font-family: var(--ff-m);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--dust);
+  white-space: nowrap;
+}
+.masthead-count strong { color: var(--paper); }
+
+/* ── HERO ── */
+.hero {
+  padding: 120px 48px 100px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--rule2);
+}
+
+/* Decorative large letter behind hero */
+.hero-bg-letter {
+  position: absolute;
+  right: -40px;
+  top: -60px;
+  font-family: var(--ff-d);
+  font-size: clamp(300px, 40vw, 560px);
+  font-weight: 700;
+  color: rgba(255,255,255,0.018);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: -0.05em;
+}
+
+.hero-inner { max-width: 1040px; margin: 0 auto; position: relative; }
+
+.hero-kicker {
+  font-family: var(--ff-m);
+  font-size: 9px;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 36px;
+}
+.hero-kicker::before {
+  content: '';
+  width: 32px; height: 1px;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+.hero-title {
+  font-family: var(--ff-d);
+  font-size: clamp(52px, 8vw, 110px);
+  font-weight: 300;
+  line-height: 0.92;
+  letter-spacing: -0.025em;
+  color: var(--paper);
+  margin-bottom: 32px;
+  max-width: 820px;
+}
+.hero-title em { font-style: italic; color: var(--gold); }
+.hero-title strong { font-weight: 700; }
+
+.hero-body {
+  max-width: 520px;
+  margin-bottom: 56px;
+}
+.hero-body p {
+  font-size: 17px;
+  color: rgba(240,235,226,0.55);
+  line-height: 1.85;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 0;
+  border: 1px solid var(--rule2);
+  width: fit-content;
+  flex-wrap: wrap;
+}
+.hero-stat {
+  padding: 20px 36px;
+  border-right: 1px solid var(--rule2);
+}
+.hero-stat:last-child { border-right: none; }
+
+.hero-stat-n {
+  font-family: var(--ff-d);
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--paper);
+  line-height: 1;
+  display: block;
+}
+.hero-stat-l {
+  font-family: var(--ff-m);
+  font-size: 8.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--dust);
+  margin-top: 6px;
+  display: block;
+}
+
+/* ── SECTION LABELS ── */
+.section-label {
+  font-family: var(--ff-m);
+  font-size: 9px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--dust);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--rule2);
+}
+
+/* ── GUIDE ARCHIVE (main listing) ── */
+.archive {
+  padding: 80px 48px;
+  border-bottom: 1px solid var(--rule2);
+}
+.archive-inner { max-width: 1040px; margin: 0 auto; }
+
+.guide-list { display: flex; flex-direction: column; gap: 0; }
+
+.guide-row {
+  display: grid;
+  grid-template-columns: 72px 1fr auto;
+  gap: 0 32px;
+  padding: 32px 0;
+  border-bottom: 1px solid var(--rule);
+  align-items: start;
+  text-decoration: none;
+  position: relative;
+  transition: background 0.2s;
+}
+.guide-row::before {
+  content: '';
+  position: absolute;
+  left: -48px; right: -48px;
+  top: 0; bottom: 0;
+  background: rgba(255,255,255,0.015);
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+.guide-row:hover::before { opacity: 1; }
+.guide-row:last-child { border-bottom: none; }
+
+/* Live rows are fully clickable */
+.guide-row.live { cursor: pointer; }
+.guide-row.soon { cursor: default; }
+
+.guide-num {
+  font-family: var(--ff-m);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--dust);
+  padding-top: 5px;
+}
+
+.guide-body { min-width: 0; }
+
+.guide-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--ff-m);
+  font-size: 8.5px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.guide-status-dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.status-live .guide-status { color: #6abf8a; }
+.status-live .guide-status-dot { background: #4a9a6a; box-shadow: 0 0 6px rgba(74,154,106,0.5); }
+.status-soon .guide-status { color: var(--dust); }
+.status-soon .guide-status-dot { background: var(--dust); }
+
+.guide-title {
+  font-family: var(--ff-d);
+  font-size: clamp(22px, 2.8vw, 30px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+  transition: color 0.2s;
+}
+.status-live .guide-title { color: var(--paper); }
+.status-soon .guide-title { color: rgba(240,235,226,0.35); }
+.guide-row:hover.live .guide-title { color: var(--gold); }
+
+.guide-author {
+  font-family: var(--ff-m);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--dust);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.guide-desc {
+  font-size: 14.5px;
+  line-height: 1.8;
+  max-width: 560px;
+}
+.status-live .guide-desc { color: rgba(240,235,226,0.5); }
+.status-soon .guide-desc { color: rgba(240,235,226,0.2); }
+
+.guide-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 14px;
+}
+.guide-tag {
+  font-family: var(--ff-m);
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+.status-live .guide-tag { border: 1px solid var(--rule2); color: var(--dust); }
+.status-soon .guide-tag { border: 1px solid rgba(255,255,255,0.05); color: rgba(255,255,255,0.15); }
+
+.guide-meta {
+  text-align: right;
+  padding-top: 5px;
+  flex-shrink: 0;
+}
+.guide-days {
+  font-family: var(--ff-d);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+  display: block;
+}
+.status-live .guide-days { color: var(--paper); }
+.status-soon .guide-days { color: rgba(240,235,226,0.15); }
+.guide-days-label {
+  font-family: var(--ff-m);
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 4px;
+}
+.status-live .guide-days-label { color: var(--dust); }
+.status-soon .guide-days-label { color: rgba(255,255,255,0.1); }
+
+.guide-arrow {
+  display: block;
+  margin-top: 16px;
+  font-family: var(--ff-m);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.guide-row:hover.live .guide-arrow { opacity: 1; }
+
+/* Redacted soon titles */
+.redacted {
+  display: inline-block;
+  background: rgba(240,235,226,0.08);
+  border-radius: 2px;
+  color: transparent;
+  user-select: none;
+  position: relative;
+}
+
+/* ── HOW IT WORKS ── */
+.how {
+  padding: 80px 48px;
+  border-bottom: 1px solid var(--rule2);
+  background: rgba(255,255,255,0.012);
+}
+.how-inner { max-width: 1040px; margin: 0 auto; }
+
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border: 1px solid var(--rule2);
+  margin-top: 0;
+}
+
+.how-step {
+  padding: 32px 28px;
+  border-right: 1px solid var(--rule2);
+  position: relative;
+}
+.how-step:last-child { border-right: none; }
+
+.how-step-n {
+  font-family: var(--ff-d);
+  font-size: 56px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.06);
+  line-height: 1;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.how-step-title {
+  font-family: var(--ff-d);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--paper);
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.how-step-copy {
+  font-size: 14px;
+  color: var(--dust);
+  line-height: 1.75;
+}
+
+/* ── EMAIL CAPTURE ── */
+.capture {
+  padding: 80px 48px;
+  border-bottom: 1px solid var(--rule2);
+  position: relative;
+  overflow: hidden;
+}
+.capture-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 60% 50%, rgba(184,150,42,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+.capture-inner {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 64px;
+  align-items: center;
+  position: relative;
+}
+.capture-eyebrow {
+  font-family: var(--ff-m);
+  font-size: 9px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+  display: block;
+}
+.capture-title {
+  font-family: var(--ff-d);
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 300;
+  color: var(--paper);
+  line-height: 1.05;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+.capture-title em { font-style: italic; color: var(--gold); }
+.capture-copy {
+  font-size: 16px;
+  color: rgba(240,235,226,0.45);
+  line-height: 1.85;
+}
+.capture-form-wrap {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--rule2);
+  padding: 36px 32px;
+  border-radius: 2px;
+}
+.capture-form-label {
+  font-family: var(--ff-m);
+  font-size: 9px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--dust);
+  display: block;
+  margin-bottom: 20px;
+}
+.capture-input {
+  width: 100%;
+  padding: 14px 18px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--rule2);
+  border-radius: 2px;
+  color: var(--paper);
+  font-family: var(--ff-b);
+  font-size: 16px;
+  outline: none;
+  margin-bottom: 12px;
+  transition: border-color 0.2s;
+  display: block;
+}
+.capture-input::placeholder { color: rgba(240,235,226,0.25); }
+.capture-input:focus { border-color: rgba(184,150,42,0.5); }
+.capture-btn {
+  width: 100%;
+  padding: 15px;
+  background: var(--gold);
+  border: none;
+  border-radius: 2px;
+  color: var(--void);
+  font-family: var(--ff-m);
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: block;
+}
+.capture-btn:hover { background: var(--goldf); }
+.capture-note {
+  font-family: var(--ff-m);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.18);
+  margin-top: 12px;
+  display: block;
+  line-height: 1.7;
+}
+.capture-success {
+  display: none;
+  font-family: var(--ff-d);
+  font-style: italic;
+  font-size: 20px;
+  color: var(--gold);
+  padding: 20px 0;
+}
+
+/* ── FAQ ── */
+.faq {
+  padding: 80px 48px;
+  border-bottom: 1px solid var(--rule2);
+}
+.faq-inner { max-width: 1040px; margin: 0 auto; }
+.faq-title {
+  font-family: var(--ff-d);
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--paper);
+  margin-bottom: 8px;
+}
+.faq-sub { font-size: 15px; color: var(--dust); margin-bottom: 48px; }
+.faq-item { border-bottom: 1px solid var(--rule); }
+.faq-q {
+  font-family: var(--ff-d);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--paper);
+  padding: 22px 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  user-select: none;
+  transition: color 0.2s;
+}
+.faq-q:hover { color: var(--gold); }
+.faq-icon {
+  font-family: var(--ff-m);
+  font-size: 14px;
+  color: var(--dust);
+  flex-shrink: 0;
+  transition: transform 0.3s var(--ease);
+}
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-a {
+  font-size: 15px;
+  color: var(--dust);
+  line-height: 1.85;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s var(--ease), opacity 0.3s, padding-bottom 0.3s;
+}
+.faq-item.open .faq-a { max-height: 400px; opacity: 1; padding-bottom: 22px; }
+
+/* ── FOOTER ── */
+footer {
+  padding: 60px 48px;
+  border-top: 1px solid var(--rule2);
+}
+.footer-inner {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 48px;
+}
+.footer-brand-name {
+  font-family: var(--ff-d);
+  font-size: 26px;
+  font-weight: 300;
+  color: var(--paper);
+  display: block;
+  margin-bottom: 12px;
+}
+.footer-brand-name em { font-style: italic; color: var(--gold); }
+.footer-copy {
+  font-family: var(--ff-m);
+  font-size: 9.5px;
+  letter-spacing: 0.12em;
+  color: rgba(240,235,226,0.22);
+  line-height: 2;
+}
+.footer-col-label {
+  font-family: var(--ff-m);
+  font-size: 9px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--dust);
+  margin-bottom: 20px;
+  display: block;
+}
+.footer-link {
+  display: block;
+  font-family: var(--ff-b);
+  font-size: 15px;
+  color: rgba(240,235,226,0.45);
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: color 0.2s;
+}
+.footer-link:hover { color: var(--gold); }
+.footer-link-coming {
+  display: block;
+  font-family: var(--ff-b);
+  font-size: 15px;
+  color: rgba(240,235,226,0.2);
+  margin-bottom: 10px;
+  cursor: default;
+}
+.footer-geo {
+  font-family: var(--ff-m);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(240,235,226,0.15);
+  line-height: 2.2;
+  margin-top: 24px;
+}
+
+/* ── BACK TO TOP ── */
+#btt {
+  position: fixed;
+  bottom: 28px; right: 28px;
+  width: 44px; height: 44px;
+  background: rgba(184,150,42,0.15);
+  border: 1px solid rgba(184,150,42,0.3);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, background 0.2s;
+  z-index: 400;
+}
+#btt.show { opacity: 1; pointer-events: auto; }
+#btt:hover { background: rgba(184,150,42,0.3); }
+#btt svg { width: 16px; height: 16px; stroke: var(--gold); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+/* ── ANIMATIONS ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+}
+.reveal.in { opacity: 1; transform: translateY(0); }
+
+/* ── PRINT ── */
+@media print {
+  body { background: white; color: black; }
+  .masthead, #prog, #btt { display: none !important; }
+  .hero-bg-letter { display: none; }
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .how-grid { grid-template-columns: 1fr 1fr; }
+  .how-step:nth-child(2) { border-right: none; }
+  .capture-inner { grid-template-columns: 1fr; gap: 40px; }
+  .footer-inner { grid-template-columns: 1fr; gap: 40px; }
+}
+
+@media (max-width: 680px) {
+  .masthead { padding: 0 20px; }
+  .masthead-tagline { display: none; }
+  .hero { padding: 80px 20px 64px; }
+  .archive { padding: 56px 20px; }
+  .how { padding: 56px 20px; }
+  .capture { padding: 56px 20px; }
+  .faq { padding: 56px 20px; }
+  footer { padding: 48px 20px; }
+  .guide-row { grid-template-columns: 48px 1fr; gap: 0 16px; }
+  .guide-meta { display: none; }
+  .hero-stats { flex-direction: column; }
+  .hero-stat { border-right: none; border-bottom: 1px solid var(--rule2); }
+  .hero-stat:last-child { border-bottom: none; }
+  .how-grid { grid-template-columns: 1fr; }
+  .how-step { border-right: none; border-bottom: 1px solid var(--rule2); }
+  .how-step:last-child { border-bottom: none; }
+}
+</style>
+</head>
+<body>
+
+<div id="prog" role="progressbar" aria-label="Reading progress"></div>
+
+<!-- ═══ MASTHEAD ═══ -->
+<header class="masthead">
+  <a class="masthead-brand" href="https://bookdecoded.com"><em>Book</em>Decoded</a>
+  <span class="masthead-tagline">30-Day Study Guides for Books That Change How You Think</span>
+  <div class="masthead-right">
+    <span class="masthead-count"><strong>1</strong>&nbsp;Live &nbsp;·&nbsp; <strong>8</strong>&nbsp;Coming</span>
+  </div>
+</header>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="hero-bg-letter">B</div>
+  <div class="hero-inner">
+    <div class="hero-kicker">Las Vegas, NV · est. 2026</div>
+    <h1 class="hero-title">
+      The books that<br>
+      shaped <em>power</em><br>
+      <strong>decoded.</strong>
+    </h1>
+    <div class="hero-body">
+      <p>Most people read books once and remember 4%. BookDecoded takes the ideas that matter and rebuilds them into 30-day structured study guides — one core theme per day, with a real-world example and a single exercise you do before tomorrow.</p>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-n">30</span>
+        <span class="hero-stat-l">Days per guide</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-n">1</span>
+        <span class="hero-stat-l">Exercise per day</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-n">9</span>
+        <span class="hero-stat-l">Guides planned</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-n">$0</span>
+        <span class="hero-stat-l">To start reading</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ARCHIVE ═══ -->
+<section class="archive" id="guides">
+  <div class="archive-inner">
+    <div class="section-label reveal">The Archive</div>
+
+    <div class="guide-list">
+
+      <!-- 01 — TROJAN (LIVE) -->
+      <a class="guide-row live status-live reveal" href="https://trojan.bookdecoded.com" style="transition-delay:0.05s">
+        <div class="guide-num">001</div>
+        <div class="guide-body">
+          <div class="guide-status">
+            <span class="guide-status-dot"></span>
+            Live Now
+          </div>
+          <h2 class="guide-title">TROJAN: The Invisible Game of Influence</h2>
+          <span class="guide-author">James Lee · Daniel Abraham</span>
+          <p class="guide-desc">A forbidden manuscript disguised as a strategy book. Six core themes — conditioning, narrative, influence, power, wealth, and self-command — decoded over 30 days with real examples and daily exercises.</p>
+          <div class="guide-tags">
+            <span class="guide-tag">Psychology</span>
+            <span class="guide-tag">Power</span>
+            <span class="guide-tag">Influence</span>
+            <span class="guide-tag">Self-Command</span>
+          </div>
+          <span class="guide-arrow">Read the Guide →</span>
+        </div>
+        <div class="guide-meta">
+          <span class="guide-days">30</span>
+          <span class="guide-days-label">Days</span>
+        </div>
+      </a>
+
+      <!-- 02 — 48 LAWS (SOON) -->
+      <div class="guide-row soon status-soon reveal" style="transition-delay:0.1s">
+        <div class="guide-num">002</div>
+        <div class="guide-body">
+          <div class="guide-status">
+            <span class="guide-status-dot"></span>
+            Coming Soon
+          </div>
+          <h2 class="guide-title">The 48 Laws of Power</h2>
+          <span class="guide-author">Robert Greene</span>
+          <p class="guide-desc">The tactical companion to TROJAN. Where TROJAN decodes the architecture of power, Greene gives you the specific moves — 48 of them, each one examined, exemplified, and applied over 30 days.</p>
+          <div class="guide-tags">
+            <span class="guide-tag">Power</span>
+            <span class="guide-tag">Strategy</span>
+            <span class="guide-tag">History</span>
+          </div>
+        </div>
+        <div class="guide-meta">
+          <span class="guide-days">30</span>
+          <span class="guide-days-label">Days</span>
+        </div>
+      </div>
+
+      <!-- 03 — INFLUENCE (SOON) -->
+      <div class="guide-row soon status-soon reveal" style="transition-delay:0.15s">
+        <div class="guide-num">003</div>
+        <div class="guide-body">
+          <div class="guide-status">
+            <span class="guide-status-dot"></span>
+            Coming Soon
+          </div>
+          <h2 class="guide-title">Influence: The Psychology of Persuasion</h2>
+          <span class="guide-author">Robert Cialdini</span>
+          <p class="guide-desc">The scientific backbone of all persuasion. Six principles — reciprocity, commitment, social proof, authority, liking, scarcity — unpacked with research, real examples, and daily inoculation exercises.</p>
+          <div class="guide-tags">
+            <span class="guide-tag">Persuasion</span>
+            <span class="guide-tag">Psychology</span>
+            <span class="guide-tag">Sales</span>
+          </div>
+        </div>
+        <div class="guide-meta">
+          <span class="guide-days">30</span>
+          <span class="guide-days-label">Days</span>
+        </div>
+      </div>
+
+      <!-- 04 — ATOMIC HABITS (SOON) -->
+      <div class="guide-row soon status-soon reveal" style="transition-delay:0.2s">
+        <div class="guide-num">004</div>
+        <div class="guide-body">
+          <div class="guide-status">
+            <span class="guide-status-dot"></span>
+            Coming Soon
+          </div>
+          <h2 class="guide-title">Atomic Habits</h2>
+          <span class="guide-author">James Clear</span>
+          <p class="guide-desc">Behavioral architecture at the smallest possible scale. Clear's four laws of behavior change, built into a 30-day implementation guide — one habit loop, one system component, one adjustment per day.</p>
+          <div class="guide-tags">
+            <span class="guide-tag">Habits</span>
+            <span class="guide-tag">Behavior</span>
+            <span class="guide-tag">Systems</span>
+          </div>
+        </div>
+        <div class="guide-meta">
+          <span class="guide-days">30</span>
+          <span class="guide-days-label">Days</span>
+        </div>
+      </div>
+
+      <!-- 05 — THINK AND GROW RICH (SOON) -->
+      <div class="guide-row soon status-soon reveal" style="transition-delay:0.25s">
+        <div class="guide-num">005</div>
+        <div class="guide-body">
+          <div class="guide-status">
+            <span class="guide-status-dot"></span>
+            Coming Soon
+          </div>
+          <h2 class="guide-title">Think and Grow Rich</h2>
+          <span class="guide-author">Napoleon Hill</span>
+          <p class="guide-desc">The original deliberate belief installation manual. Hill's thirteen principles of wealth consciousness, examined through the lens of modern psychology and applied with daily exercises over 30 days.</p>
+          <div class="guide-tags">
+            <span class="guide-tag">Wealth</span>
+            <span class="guide-tag">Mindset</span>
+            <span class="guide-tag">Belief</span>
+          </div>
+        </div>
+        <div class="guide-meta">
+          <span class="guide-days">30</span>
+          <span class="guide-days-label">Days</span>
+        </div>
+      </div>
+
+      <!-- 06 — ART OF WAR (SOON) -->
+      <div class="guide-row soon status-soon reveal" style="transition-delay:0.3s">
+        <div class="guide-num">006</div>
+        <div class="guide-body">
+          <div class="guide-status">
+            <span class="guide-status-dot"></span>
+            Coming Soon
+          </div>
+          <h2 class="guide-title">The Art of War</h2>
+          <span class="guide-author">Sun Tzu</span>
+          <p class="guide-desc">The oldest power manual in existence, rebuilt for the modern reader. Each of the thirteen chapters decoded into daily strategy — positional thinking, information control, and the art of winning without fighting.</p>
+          <div class="guide-tags">
+            <span class="guide-tag">Strategy</span>
+            <span class="guide-tag">Power</span>
+            <span class="guide-tag">Ancient</span>
+          </div>
+        </div>
+        <div class="guide-meta">
+          <span class="guide-days">30</span>
+          <span class="guide-days-label">Days</span>
+        </div>
+      </div>
+
+      <!-- 07 — RICHEST MAN (SOON) -->
+      <div class="guide-row soon status-soon reveal" style="transition-delay:0.35s">
+        <div class="guide-num">007</div>
+        <div class="guide-body">
+          <div class="guide-status">
+            <span class="guide-status-dot"></span>
+            Coming Soon
+          </div>
+          <h2 class="guide-title">The Richest Man in Babylon</h2>
+          <span class="guide-author">George S. Clason</span>
+          <p class="guide-desc">Wealth as stored power, delivered in parables. Clason's ancient financial principles — pay yourself first, make money work, guard against loss — applied one principle per day over 30 days.</p>
+          <div class="guide-tags">
+            <span class="guide-tag">Wealth</span>
+            <span class="guide-tag">Finance</span>
+            <span class="guide-tag">Optionality</span>
+          </div>
+        </div>
+        <div class="guide-meta">
+          <span class="guide-days">30</span>
+          <span class="guide-days-label">Days</span>
+        </div>
+      </div>
+
+      <!-- 08 — MAN'S SEARCH (SOON) -->
+      <div class="guide-row soon status-soon reveal" style="transition-delay:0.4s">
+        <div class="guide-num">008</div>
+        <div class="guide-body">
+          <div class="guide-status">
+            <span class="guide-status-dot"></span>
+            Coming Soon
+          </div>
+          <h2 class="guide-title">Man's Search for Meaning</h2>
+          <span class="guide-author">Viktor Frankl</span>
+          <p class="guide-desc">The counterweight to every power book in this archive. Where the others teach you to operate within systems, Frankl teaches you what to operate toward — and how to find purpose that no system can install or remove.</p>
+          <div class="guide-tags">
+            <span class="guide-tag">Meaning</span>
+            <span class="guide-tag">Philosophy</span>
+            <span class="guide-tag">Resilience</span>
+          </div>
+        </div>
+        <div class="guide-meta">
+          <span class="guide-days">30</span>
+          <span class="guide-days-label">Days</span>
+        </div>
+      </div>
+
+      <!-- 09 — THINKING FAST SLOW (SOON) -->
+      <div class="guide-row soon status-soon reveal" style="transition-delay:0.45s">
+        <div class="guide-num">009</div>
+        <div class="guide-body">
+          <div class="guide-status">
+            <span class="guide-status-dot"></span>
+            Coming Soon
+          </div>
+          <h2 class="guide-title">Thinking, Fast and Slow</h2>
+          <span class="guide-author">Daniel Kahneman</span>
+          <p class="guide-desc">The cognitive science of why conditioning works. Kahneman's System 1 / System 2 framework is the neurological map of everything every other book in this archive operates on. The theory behind the practice.</p>
+          <div class="guide-tags">
+            <span class="guide-tag">Cognitive Science</span>
+            <span class="guide-tag">Psychology</span>
+            <span class="guide-tag">Decision-Making</span>
+          </div>
+        </div>
+        <div class="guide-meta">
+          <span class="guide-days">30</span>
+          <span class="guide-days-label">Days</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ HOW IT WORKS ═══ -->
+<section class="how reveal">
+  <div class="how-inner">
+    <div class="section-label">How It Works</div>
+    <div class="how-grid">
+      <div class="how-step">
+        <span class="how-step-n">01</span>
+        <p class="how-step-title">Pick a guide</p>
+        <p class="how-step-copy">Choose any book in the archive. Start with TROJAN or wait for the one that calls to you. Each guide is self-contained and requires no prior knowledge.</p>
+      </div>
+      <div class="how-step">
+        <span class="how-step-n">02</span>
+        <p class="how-step-title">One day at a time</p>
+        <p class="how-step-copy">Read one entry per morning. Each day delivers one core idea, one real-world example showing it in action, and one exercise to apply before tomorrow.</p>
+      </div>
+      <div class="how-step">
+        <span class="how-step-n">03</span>
+        <p class="how-step-title">Do the exercise</p>
+        <p class="how-step-copy">This is the non-negotiable part. The exercise is not optional. It is the mechanism. Ideas without application are just more conditioning.</p>
+      </div>
+      <div class="how-step">
+        <span class="how-step-n">04</span>
+        <p class="how-step-title">Return on Day 30</p>
+        <p class="how-step-copy">Go back to Day 1. Re-read your first answers. Notice the gap between what you saw then and what you see now. That gap is the only measure of progress that matters.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EMAIL CAPTURE ═══ -->
+<section class="capture reveal" id="notify">
+  <div class="capture-bg"></div>
+  <div class="capture-inner">
+    <div>
+      <span class="capture-eyebrow">New Guides · Notified First</span>
+      <h2 class="capture-title">Know when the next<br>guide <em>goes live.</em></h2>
+      <p class="capture-copy">Eight more guides are in production. Enter your email and you'll be the first to know when each one drops — plus early access before public launch.</p>
+    </div>
+    <div class="capture-form-wrap">
+      <span class="capture-form-label">Get notified · Free</span>
+      <input class="capture-input" type="email" id="cap-email" placeholder="your@email.com" autocomplete="email">
+      <button class="capture-btn" onclick="capSubmit()">Notify Me When Live</button>
+      <span class="capture-note">No spam. One email per new guide launch. Unsubscribe anytime.</span>
+      <p class="capture-success" id="cap-success">You're on the list. We'll be in touch.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="faq reveal" id="faq">
+  <div class="faq-inner">
+    <div class="section-label">Questions</div>
+    <h2 class="faq-title">Frequently Asked</h2>
+    <p class="faq-sub">About BookDecoded and how the guides work</p>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="faq(this)" tabindex="0" role="button" aria-expanded="false">What is BookDecoded?<span class="faq-icon">+</span></div>
+      <div class="faq-a">BookDecoded publishes structured 30-day study guides for the most influential books on power, influence, psychology, and self-command. Each guide breaks a book into one theme per day — with a real-world example and a single actionable exercise. The guides are free to read online. Companion workbooks (print-ready PDFs) are available for $8.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="faq(this)" tabindex="0" role="button" aria-expanded="false">Do I need to own the book to use the guide?<span class="faq-icon">+</span></div>
+      <div class="faq-a">No. Each guide is self-contained. You can work through it without owning the book — the guide extracts and applies the core ideas independently. That said, reading the book alongside the guide produces significantly deeper results, and each guide links directly to the book on Amazon.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="faq(this)" tabindex="0" role="button" aria-expanded="false">How are the guides different from book summaries?<span class="faq-icon">+</span></div>
+      <div class="faq-a">Book summaries tell you what a book says. BookDecoded guides make you do something with it. Every day ends with a real exercise — a question to answer, a behavior to practice, a pattern to observe in your own life. The structure is designed to move ideas from the page into lived experience over 30 days.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="faq(this)" tabindex="0" role="button" aria-expanded="false">Are the guides really free?<span class="faq-icon">+</span></div>
+      <div class="faq-a">Yes. The online guides are completely free. You enter your email at the halfway point to unlock the second half of each guide — this lets us notify you when new guides launch. Companion workbooks (formatted PDF versions with journal space for each exercise) are available for $8 each on Payhip.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="faq(this)" tabindex="0" role="button" aria-expanded="false">When will the other guides launch?<span class="faq-icon">+</span></div>
+      <div class="faq-a">New guides are published regularly. The 48 Laws of Power, Influence by Cialdini, and Atomic Habits are currently in production. Enter your email in the notification form above to be alerted the moment each one goes live — subscribers get 48 hours of early access before public launch.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="faq(this)" tabindex="0" role="button" aria-expanded="false">Can I suggest a book?<span class="faq-icon">+</span></div>
+      <div class="faq-a">Yes. The archive is built around books that reward this kind of slow, applied study — typically in the areas of power, influence, psychology, wealth, strategy, and philosophy. If there's a book you'd like to see decoded, email hello@bookdecoded.com with the title and why you think it belongs here.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <span class="footer-brand-name"><em>Book</em>Decoded</span>
+      <p class="footer-copy">
+        30-day study guides for books<br>
+        that change how you think.<br><br>
+        Published by Eric Coste<br>
+        EBSS Web Studio · ebssweb.com<br>
+      </p>
+      <p class="footer-geo">
+        Las Vegas, NV · USA<br>
+        36.1699° N, 115.1398° W<br>
+        hello@bookdecoded.com
+      </p>
+    </div>
+    <div>
+      <span class="footer-col-label">Live Guides</span>
+      <a class="footer-link" href="https://trojan.bookdecoded.com">TROJAN — James Lee</a>
+      <span class="footer-col-label" style="margin-top:28px;">Coming Soon</span>
+      <span class="footer-link-coming">The 48 Laws of Power</span>
+      <span class="footer-link-coming">Influence — Cialdini</span>
+      <span class="footer-link-coming">Atomic Habits</span>
+      <span class="footer-link-coming">Think and Grow Rich</span>
+      <span class="footer-link-coming">The Art of War</span>
+    </div>
+    <div>
+      <span class="footer-col-label">Also by Eric Coste</span>
+      <a class="footer-link" href="https://payhip.com/ericcoste" target="_blank" rel="noopener">Payhip Storefront</a>
+      <a class="footer-link" href="https://getcreditrepairguide.online" target="_blank" rel="noopener">Credit Repair Guide</a>
+      <a class="footer-link" href="https://parseur10x.live" target="_blank" rel="noopener">PARSEUR 10X</a>
+      <a class="footer-link" href="https://oracelis.app" target="_blank" rel="noopener">ORACELIS Astrology</a>
+      <a class="footer-link" href="https://ebssweb.com" target="_blank" rel="noopener">EBSS Web Studio</a>
+    </div>
+  </div>
+</footer>
+
+<button id="btt" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 16 16"><polyline points="3,10 8,5 13,10"/></svg>
+</button>
+
+<script>
+// Progress bar
+const prog = document.getElementById('prog');
+window.addEventListener('scroll', () => {
+  prog.style.width = (window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100) + '%';
+}, { passive: true });
+
+// Back to top
+const btt = document.getElementById('btt');
+window.addEventListener('scroll', () => {
+  btt.classList.toggle('show', window.scrollY > 400);
+}, { passive: true });
+
+// Scroll reveal
+const ro = new IntersectionObserver(entries => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('in'), i * 60);
+      ro.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.06 });
+document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+
+// FAQ accordion
+function faq(el) {
+  const item = el.closest('.faq-item');
+  const open = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => {
+    i.classList.remove('open');
+    i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+  });
+  if (!open) { item.classList.add('open'); el.setAttribute('aria-expanded', 'true'); }
+}
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); faq(q); } });
+});
+
+// Email capture
+function capSubmit() {
+  const email = document.getElementById('cap-email').value.trim();
+  if (!email || !email.includes('@')) { document.getElementById('cap-email').focus(); return; }
+  document.querySelector('.capture-btn').style.display = 'none';
+  document.getElementById('cap-email').style.display = 'none';
+  document.querySelector('.capture-note').style.display = 'none';
+  document.getElementById('cap-success').style.display = 'block';
+}
+document.addEventListener('DOMContentLoaded', () => {
+  const e = document.getElementById('cap-email');
+  if (e) e.addEventListener('keydown', ev => { if (ev.key === 'Enter') capSubmit(); });
+});
+</script>
+</body>
+</html>

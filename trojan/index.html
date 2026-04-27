@@ -2892,7 +2892,20 @@ function initLockOverlays() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', initLockOverlays);
+// Run initLockOverlays after DOM + short delay to ensure locked days are present
+document.addEventListener('DOMContentLoaded', () => {
+  // Run immediately
+  initLockOverlays();
+  // Also run after 500ms in case scroll reveal hasn't fired yet
+  setTimeout(initLockOverlays, 500);
+  // And observe for any newly visible days
+  const mo = new MutationObserver(initLockOverlays);
+  mo.observe(document.body, { childList: true, subtree: true, attributeFilter: ['class'] });
+  // Stop observing once unlocked
+  document.body.addEventListener('classchange', () => {
+    if (document.body.classList.contains('unlocked')) mo.disconnect();
+  });
+});
 
 function tog(n) {
   let d = load();
@@ -3028,18 +3041,26 @@ async function unlockGate() {
   }, 600);
 }
 
-// Check unlock state on load
+// Check unlock state on load — localStorage OR ?unlocked=1 URL param
 (function() {
   try {
-    if (localStorage.getItem(GATE_KEY)) {
+    const params = new URLSearchParams(window.location.search);
+    const fromEmail = params.get('unlocked') === '1';
+    if (fromEmail) {
+      // Came from email link — store in localStorage and clean URL
+      localStorage.setItem(GATE_KEY, '1');
+      const url = new URL(window.location);
+      url.searchParams.delete('unlocked');
+      window.history.replaceState({}, '', url);
+    }
+    if (localStorage.getItem(GATE_KEY) || fromEmail) {
       document.body.classList.add('unlocked');
-      if (document.getElementById('gate-success')) {
-        document.getElementById('gate-success').style.display = 'block';
-        const gf = document.querySelector('.gate-form');
-        const gn = document.querySelector('.gate-note');
-        if (gf) gf.style.display = 'none';
-        if (gn) gn.style.display = 'none';
-      }
+      const gs = document.getElementById('gate-success');
+      const gf = document.querySelector('.gate-form');
+      const gp = document.querySelector('.gate-privacy');
+      if (gs) gs.style.display = 'block';
+      if (gf) gf.style.display = 'none';
+      if (gp) gp.style.display = 'none';
     }
   } catch {}
 })();

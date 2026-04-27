@@ -1222,7 +1222,7 @@ document.querySelectorAll('.faq-q').forEach(q => {
 });
 
 // Email capture
-function capSubmit() {
+async function capSubmit() {
   const email = document.getElementById('cap-email').value.trim();
   if (!email || !email.includes('@')) { document.getElementById('cap-email').focus(); return; }
   const capBtn = document.querySelector('.capture-btn');

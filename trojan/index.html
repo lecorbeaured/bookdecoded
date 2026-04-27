@@ -2936,7 +2936,7 @@ function closeModal(e) {
   if (e.target === document.getElementById('contact-modal')) closeContactModal();
 }
 
-function submitModal() {
+async function submitModal() {
   const name    = document.getElementById('m-name').value.trim();
   const email   = document.getElementById('m-email').value.trim();
   const subject = document.getElementById('m-subject').value;
@@ -3009,7 +3009,7 @@ document.addEventListener('keydown', e => {
 // ── EMAIL GATE ──
 const GATE_KEY = 'trojan_unlocked';
 
-function unlockGate() {
+async function unlockGate() {
   const email = document.getElementById('gate-email').value.trim();
   if (!email || !email.includes('@')) {
     document.getElementById('gate-email').focus();

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,700');
+    </style>
+  </defs>
+  <!-- Background -->
+  <rect width="64" height="64" rx="10" fill="#080806"/>
+  <!-- Subtle border -->
+  <rect width="64" height="64" rx="10" fill="none" stroke="#b8962a" stroke-width="1.5" stroke-opacity="0.5"/>
+  <!-- B letterform -->
+  <text x="8" y="47" font-family="Georgia, serif" font-style="italic" font-weight="700"
+        font-size="40" fill="#b8962a" letter-spacing="-2">B</text>
+  <!-- D letterform — slightly offset for monogram overlap feel -->
+  <text x="30" y="47" font-family="Georgia, serif" font-style="italic" font-weight="700"
+        font-size="40" fill="#d4aa38" opacity="0.92" letter-spacing="-2">D</text>
+  <!-- Thin gold underline -->
+  <line x1="8" y1="52" x2="56" y2="52" stroke="#b8962a" stroke-width="1" stroke-opacity="0.6"/>
+</svg>

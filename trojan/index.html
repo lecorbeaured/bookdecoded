@@ -872,6 +872,10 @@ footer {
   pointer-events: none;
   user-select: none;
 }
+.locked .lock-overlay {
+  pointer-events: auto;
+  cursor: pointer;
+}
 .lock-overlay {
   position: absolute;
   inset: 0;
@@ -882,6 +886,7 @@ footer {
   backdrop-filter: blur(3px);
   z-index: 10;
   cursor: pointer;
+  pointer-events: auto;
   transition: background 0.2s;
 }
 .lock-overlay:hover { background: rgba(248,245,240,0.97); }

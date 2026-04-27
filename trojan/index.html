@@ -25,13 +25,13 @@
 <meta property="og:url" content="https://trojanstudyguide.com/">
 <meta property="og:site_name" content="TROJAN Study Guide">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://trojanstudyguide.com/og-image.jpg">
+<meta property="og:image" content="https://trojan.bookdecoded.com/trojan2.png">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="TROJAN — 30-Day Study Guide">
 <meta name="twitter:description" content="Decode TROJAN: The Invisible Game of Influence by James Lee, one theme per day for 30 days.">
-<meta name="twitter:image" content="https://trojanstudyguide.com/og-image.jpg">
+<meta name="twitter:image" content="https://trojan.bookdecoded.com/trojan2.png">
 
 <!-- Schema: Article -->
 <script type="application/ld+json">
@@ -1623,7 +1623,7 @@ body.unlocked .lock-overlay { display: none; }
 }
 
 @media (max-width: 700px) {
-  .get-book-grid { grid-template-columns: 1fr; }
+  .get-book-grid { grid-template-columns: 1fr !important; }
   .get-book-inner { padding: 0 24px; }
 }
 
@@ -1843,6 +1843,28 @@ body.unlocked .lock-overlay { display: none; }
   .modal-row { grid-template-columns: 1fr; gap: 0; }
   .modal-header { padding: 28px 24px 24px; }
   .modal-body { padding: 24px 24px 28px; }
+}
+
+
+/* ─── BOOK COVER IMAGE ─── */
+.get-book-cover {
+  flex-shrink: 0;
+  width: 220px;
+}
+.get-book-cover img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 3px;
+  box-shadow: -6px 8px 32px rgba(0,0,0,0.45), 2px 2px 0 rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.get-book-cover img:hover {
+  transform: translateY(-4px) rotate(-0.5deg);
+  box-shadow: -8px 14px 40px rgba(0,0,0,0.55), 2px 2px 0 rgba(0,0,0,0.2);
+}
+@media (max-width: 700px) {
+  .get-book-cover { width: 160px; margin: 0 auto; }
 }
 
 </style>
@@ -2677,7 +2699,12 @@ body.unlocked .lock-overlay { display: none; }
 <section class="get-book" aria-labelledby="get-book-h">
   <div class="get-book-inner">
     <div class="get-book-label">Get the Book</div>
-    <div class="get-book-grid">
+    <div class="get-book-grid" style="grid-template-columns: 220px 1fr 1fr; gap: 40px;">
+
+      <!-- Book cover -->
+      <div class="get-book-cover">
+        <img src="trojan2.png" alt="TROJAN: The Invisible Game of Influence — book cover" loading="lazy">
+      </div>
 
       <div class="get-book-left">
         <h2>Read the book.<br>Not just the <em>guide.</em></h2>
